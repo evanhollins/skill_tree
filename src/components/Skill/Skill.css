@@ -1,0 +1,22 @@
+.skill_container {
+    flex-grow: 1;
+}
+
+.skill {
+    margin-left: auto;
+    margin-right: auto;
+    height: 3rem;
+    width: 12rem;
+    font-size: 1rem;
+    display: table;
+
+    text-align: center;
+
+    border: 0.5rem solid;
+    border-radius: 3rem;
+}
+
+.skill_text {
+    display: table-cell;
+    vertical-align: middle;
+}

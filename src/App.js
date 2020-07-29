@@ -1,24 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import Header from './components/Header/Header';
+import Skill from './components/Skill/Skill';
+import Branches from './components/Branches/Branches';
+import Colors from './Colors';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <div className="container">
+        <Skill title="Hello world!" color={Colors.teal_dark}/>
+      </div>
+      <Branches branches={[
+        {
+          from: {
+            position: 1/2,
+            color: Colors.teal_dark
+          },
+          to: {
+            position: 1/4,
+            color: Colors.green_dark
+          }
+        },
+        {
+          from: {
+            position: 1/2,
+            color: Colors.teal_dark
+          },
+          to: {
+            position: 3/4,
+            color: Colors.purple_dark
+          }
+        }
+      ]}/>
+      <div className="container">
+        <Skill title="Skill left" color={Colors.green_dark}/>
+        <Skill title="Skill right" color={Colors.purple_dark}/>
+      </div>
     </div>
   );
 }
